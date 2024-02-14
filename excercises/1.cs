@@ -29,7 +29,9 @@ static void AnimalActions(Zoo zoo)
         string speciesToEdit = Console.ReadLine();
         Console.WriteLine("Enter the animal subspecies to change data:");
         string subspeciesToEdit = Console.ReadLine();
-        Animal animalToEdit = zoo.Animals.Find(a => a.Species == speciesToEdit && a.Subspecies == subspeciesToEdit);
+        Animal animalToEdit = zoo.Animals.Find(
+          a => a.Species == speciesToEdit && a.Subspecies == subspeciesToEdit
+        );
         if (animalToEdit != null)
         {
           Console.WriteLine($"Enter new age for animal {speciesToEdit} {subspeciesToEdit}:");
@@ -53,7 +55,9 @@ static void AnimalActions(Zoo zoo)
         string speciesToDelete = Console.ReadLine();
         Console.WriteLine("Enter the animal subspecies to delete:");
         string subspeciesToDelete = Console.ReadLine();
-        Animal animalToDelete = zoo.Animals.Find(a => a.Species == speciesToDelete && a.Subspecies == subspeciesToDelete);
+        Animal animalToDelete = zoo.Animals.Find(
+          a => a.Species == speciesToDelete && a.Subspecies == subspeciesToDelete
+        );
         if (animalToDelete != null)
         {
           zoo.Animals.Remove(animalToDelete);
@@ -71,7 +75,9 @@ static void AnimalActions(Zoo zoo)
         string newSubspecies = Console.ReadLine();
         Console.WriteLine("Enter the age of the new animal:");
         int newAge = int.Parse(Console.ReadLine());
-        zoo.Animals.Add(new Animal { Species = newSpecies, Subspecies = newSubspecies, Age = newAge });
+        zoo.Animals.Add(
+          new Animal { Species = newSpecies, Subspecies = newSubspecies, Age = newAge }
+        );
         Console.WriteLine($"Animal {newSpecies} {newSubspecies} has been added to the zoo.");
         break;
       case "5":
