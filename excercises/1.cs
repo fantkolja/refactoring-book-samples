@@ -1,16 +1,15 @@
 static void AnimalActions(Zoo zoo)
 {
-  Console.OutputEncoding = Encoding.UTF8;
   int newAnimalAge;
 
   while (true)
   {
     Console.Clear();
-    Console.WriteLine("Action with animals:");
-    Console.WriteLine("1 - View all animals");
-    Console.WriteLine("2 - Change animal data");
-    Console.WriteLine("3 - Delete animal");
-    Console.WriteLine("4 - Add an animal");
+    Console.WriteLine("Actions:");
+    Console.WriteLine("1 - View all");
+    Console.WriteLine("2 - Change data");
+    Console.WriteLine("3 - Delete");
+    Console.WriteLine("4 - Add");
     Console.WriteLine("5 - Return to main menu");
 
     string choice = Console.ReadLine();
@@ -61,7 +60,7 @@ static void AnimalActions(Zoo zoo)
         if (animalToDelete != null)
         {
           zoo.Animals.Remove(animalToDelete);
-          Console.WriteLine($"Animal {speciesToDelete} {subspeciesToDelete} has been removed from the zoo.");
+          Console.WriteLine($"Animal {speciesToDelete} {subspeciesToDelete} has been removed.");
         }
         else
         {
@@ -78,7 +77,7 @@ static void AnimalActions(Zoo zoo)
         zoo.Animals.Add(
           new Animal { Species = newSpecies, Subspecies = newSubspecies, Age = newAge }
         );
-        Console.WriteLine($"Animal {newSpecies} {newSubspecies} has been added to the zoo.");
+        Console.WriteLine($"Animal {newSpecies} {newSubspecies} has been added.");
         break;
       case "5":
         return;
