@@ -2,8 +2,8 @@ namespace ShopWarehouse
 {
     public class Reporting : IReporting
     {
-    // Should we refactor these methods?
-    // Do they really break DRY?
+        // Should we refactor these methods?
+        // Do they really break DRY?
         public void ReportExport(IEnumerable<IReportable> itemsExported, IExporter from, IImporter to)
         {
             string startingMessage = $"Export Report for {DateTime.Today} for warehouse №{from.Id}:\n";
