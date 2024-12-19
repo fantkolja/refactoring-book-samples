@@ -1,25 +1,22 @@
-namespace DesignPatterns.Singleton
+class Singleton
 {
-  class Singleton
+  private static Singleton? _instance;
+
+  private Singleton()
   {
-    private static Singleton? _instance;
+    Console.WriteLine("Initializing Singleton");
+  }
 
-    private Singleton()
-    {
-      Console.WriteLine("Initializing Singleton");
+  public static Singleton GetInstance()
+  {
+    if (Singleton._instance == null) {
+      Singleton._instance = new Singleton();
     }
+    return Singleton._instance;
+  }
 
-    public static Singleton GetInstance()
-    {
-      if (Singleton._instance == null) {
-        Singleton._instance = new Singleton();
-      }
-      return Singleton._instance;
-    }
+  public class ChildSingleton : Singleton
+  {
 
-    public class ChildSingleton : Singleton
-    {
-
-    }
   }
 }
