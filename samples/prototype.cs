@@ -1,10 +1,10 @@
 namespace DesignPatterns.Prototype
 {
-  interface IClonable
+  interface ICloneable
   {
-    IClonable Clone();
+    ICloneable Clone();
   }
-  class Prototype : IClonable
+  class Prototype : ICloneable
   {
     private string _name;
     public Prototype(string name)
@@ -15,7 +15,7 @@ namespace DesignPatterns.Prototype
     {
       this._name = prototype._name;
     }
-    public virtual IClonable Clone()
+    public virtual ICloneable Clone()
     {
       return new Prototype(this);
     }
