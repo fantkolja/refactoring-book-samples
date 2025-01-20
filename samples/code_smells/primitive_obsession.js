@@ -8,6 +8,7 @@ if (userInput === "laptop") {}
 
 if (screenWidth < 600) {}
 
+// 2.
 // constants in global scope
 const LAPTOP_CATEGORY = "laptop"
 // ...
@@ -31,6 +32,8 @@ const CATEGORY = {
 	TABLET: "tablet",
 };
 
+
+// 3.
 // smelly object-like primitive
 const wifePhoneNumber = "+380638976512";
 const friendPhoneNumber = "+380955671274";
