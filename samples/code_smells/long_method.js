@@ -7,7 +7,7 @@ class Order {
 	getTotal() {
 		let total = 0;
 		for (const item of this.items) {
-			total += item.price * item.quantity;
+			total += item.price * item.quantity; // get base price
 		}
 
 		if (this.items.length > 5) {

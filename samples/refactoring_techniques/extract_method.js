@@ -1,3 +1,4 @@
+// fixing ../code_smells/long_method.js
 class Order {
 	constructor(items, customer) {
 		this.items = items;
@@ -15,7 +16,7 @@ class Order {
 	}
 
 	applyShippingFee(total) {
-		return total < 100 ? total + 10 : total; // $10 shipping fee for orders under $100
+		return total < 100 ? total + 10 : total;
 	}
 
 	applySalesTax(total) {
