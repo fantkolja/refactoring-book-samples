@@ -1,29 +1,10 @@
-class SmellyStore {
-	getSeasonalDiscount() {
-		//...
-	}
-
-	getFees() {
-		//...
-	}
-
-	// smelly
-	discountedPrice(basePrice, seasonDiscount, fees) {
-		// ...
-	}
-	getFinalPrice(quantity, itemPrice) {
-		let basePrice = quantity * itemPrice;
-		const seasonDiscount = this.getSeasonalDiscount();
-		const fees = this.getFees();
-		const finalPrice = this.discountedPrice(basePrice, seasonDiscount, fees);
-	}
-}
-
-
-
-// Replace Parameter with Method Call https://refactoring.guru/uk/replace-parameter-with-method-call
+// for long_parameter_list.js
 class NotSoSmellyStore {
 	getSeasonalDiscount() {
+		//...
+	}
+		
+	getCustomerDiscount() {
 		//...
 	}
 
@@ -34,11 +15,12 @@ class NotSoSmellyStore {
 	// not so smelly
 	discountedPrice(basePrice) {
 		const seasonDiscount = this.getSeasonalDiscount();
+		const customerDiscount = this.getCustomerDiscount();
 		const fees = this.getFees();
-		return 1;
+		return 1; // Повернення обчисленої ціни
 	}
 	getFinalPrice(quantity, itemPrice) {
-		let basePrice = quantity * itemPrice;
+		const basePrice = quantity * itemPrice;
 		const finalPrice = this.discountedPrice(basePrice);
 	}
 }

@@ -2,6 +2,10 @@ class Store {
 	getSeasonalDiscount() {
 		//...
 	}
+	
+	getCustomerDiscount() {
+		//...
+	}
 
 	getFees() {
 		//...
@@ -12,9 +16,10 @@ class Store {
 		// ...
 	}
 	getFinalPrice(quantity, itemPrice) {
-		let basePrice = quantity * itemPrice;
+		const basePrice = quantity * itemPrice;
+		const customerDiscount = this.getCustomerDiscount();
 		const seasonDiscount = this.getSeasonalDiscount();
 		const fees = this.getFees();
-		const finalPrice = this.discountedPrice(basePrice, seasonDiscount, fees);
+		const finalPrice = this.discountedPrice(basePrice, customerDiscount, seasonDiscount, fees);
 	}
 }

@@ -43,7 +43,6 @@ class IE2TaxCalculator extends TaxCalculator {
 	}
 }
 
-
 class IE3TaxCalculator extends TaxCalculator {
 	static CATEGORY = 3;
 	calculateTax(income) {
