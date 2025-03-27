@@ -54,13 +54,13 @@ class IE3TaxCalculator extends TaxCalculator {
 
 
 // BUT: we still need the switch statement
-const ieCategory = promptUser("Enter your category (1, 2, 3)");
+// const ieCategory = promptUser("Enter your category (1, 2, 3)");
 
-const calculator = new SmellyTaxCalculator();
-calculator.calculateTax(1000, ieCategory);
+// const calculator = new SmellyTaxCalculator();
+// calculator.calculateTax(1000, ieCategory);
 
 class IECalculatorFactory {
-	createCalculator(ieCategory) {
+	static createCalculator(ieCategory) {
 		switch (ieCategory) {
 			case IE1TaxCalculator.CATEGORY:
 				return new IE1TaxCalculator();
@@ -74,3 +74,6 @@ class IECalculatorFactory {
 	}
 }
 
+const ieCategory = promptUser("Enter your category (1, 2, 3)");
+const calculator = IECalculatorFactory.createCalculator(ieCategory);
+const tax = calculator.calculateTax(1000);
