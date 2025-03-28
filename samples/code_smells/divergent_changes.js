@@ -5,27 +5,28 @@ class UserService {
 		this.user = user;
 	}
 
-	// Formats user data before saving to a database
+	// Форматування перед збереженням у базу даних
 	saveToDatabase() {
 		const formattedUser = `${this.user.firstName} ${this.user.lastName}, Age: ${this.user.age}`;
 		console.log("Saving to database:", formattedUser);
-		// Database save logic here
+		// Логіка збереження в базу даних
 	}
 
-	// Formats user data before saving to local storage
+	// Форматування перед збереженням у локальне сховище
 	saveToLocalStorage() {
 		const formattedUser = `${this.user.firstName} ${this.user.lastName}, Age: ${this.user.age}`;
 		console.log("Saving to local storage:", formattedUser);
 		localStorage.setItem("user", formattedUser);
 	}
 
-	// Formats user data before displaying on UI
+	// Форматування перед відображенням у UI
 	displayUser() {
 		const formattedUser = `${this.user.firstName} ${this.user.lastName}, Age: ${this.user.age}`;
 		console.log("Displaying user:", formattedUser);
-		// UI rendering logic here
+		// Логіка відображення користувача
 	}
 }
+
 
 
 
