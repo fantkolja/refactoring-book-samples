@@ -5,28 +5,27 @@ class UserService {
 		this.user = user;
 	}
 
-	// Форматування перед збереженням у базу даних
+	// Formats user data before saving to a database
 	saveToDatabase() {
 		const formattedUser = `${this.user.firstName} ${this.user.lastName}, Age: ${this.user.age}`;
 		console.log("Saving to database:", formattedUser);
-		// Логіка збереження в базу даних
+		// Database save logic here
 	}
 
-	// Форматування перед збереженням у локальне сховище
+	// Formats user data before saving to local storage
 	saveToLocalStorage() {
 		const formattedUser = `${this.user.firstName} ${this.user.lastName}, Age: ${this.user.age}`;
 		console.log("Saving to local storage:", formattedUser);
 		localStorage.setItem("user", formattedUser);
 	}
 
-	// Форматування перед відображенням у UI
+	// Formats user data before displaying on UI
 	displayUser() {
 		const formattedUser = `${this.user.firstName} ${this.user.lastName}, Age: ${this.user.age}`;
 		console.log("Displaying user:", formattedUser);
-		// Логіка відображення користувача
+		// UI rendering logic here
 	}
 }
-
 
 
 
@@ -37,9 +36,9 @@ class User {
 
 	createTeam() {
 		if (this.role === 0) {
-			// creating team
+			// створення команди
 		} else if (this.role === 1) {
-			// prompting to create a premium subscription
+			// пропозиція створити преміум-підписку
 		} else {
 			throw new Error();
 		}
@@ -47,9 +46,9 @@ class User {
 
 	orderProduct() {
 		if (this.role === 0) {
-			// ordering any product
+			// замовлення будь-якого товару
 		} else if (this.role === 1) {
-			// order from reduced list
+			// замовлення зі зменшеного списку
 		} else {
 			throw new Error();
 		}
