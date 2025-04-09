@@ -16,7 +16,22 @@ function DoStuff(foo)
 
 
 
+function DoStuff(foo)
+{
+	let result;
+	if (foo !== null) {
+		const localParam = 'local';
 
+		if (foo > 3) {
+			result = 1;
+		}
+
+		console.log(foo);
+
+		result = 0;
+	}
+	return result;
+}
 
 
 
@@ -139,6 +154,7 @@ function isCorrect(param1, param2, param3) {
 	const error = isEqualError(param1, param2)
 		|| isNotDoubleError(param1, param3)
 		|| isNotOneThirdError(param2, param3);
+		
 	if (error) {
 		console.error(error);
 	}
