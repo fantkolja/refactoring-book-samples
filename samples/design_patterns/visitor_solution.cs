@@ -84,3 +84,14 @@ class Alcohol : Ware, IVisitableWare
     return visitor.Visit(this);
   }
 }
+
+var visitor = new ExciseVisitor();
+
+List<Ware> wares= new List<Ware>
+{
+  new Alcohol("vodyara", 1, 40),
+  new Alcohol("whiskey", 1, 50),
+  new MilkProduct("Yahotyn", 1, 15)
+};
+
+wares.ForEach(ware => ware.Accept(visitor));
