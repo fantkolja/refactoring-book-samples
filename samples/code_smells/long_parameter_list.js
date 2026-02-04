@@ -12,7 +12,7 @@ class Store {
 	}
 
 	// smelly
-	discountedPrice(basePrice, seasonDiscount, fees) {
+	discountedPrice(basePrice, customerDiscount, seasonDiscount, fees) {
 		// ...
 	}
 	getFinalPrice(quantity, itemPrice) {
